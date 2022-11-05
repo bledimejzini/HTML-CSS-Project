@@ -110,7 +110,9 @@ header{
 .products {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 #offer{
     margin: 80px auto;
     background: var(--bg);
@@ -142,6 +144,7 @@ footer h3{
 .footer-content{
     padding: 80px 0;
     display: flex;
+    align-items: center;
 }
 .footer-content .col{
     flex: 1;
@@ -150,4 +153,96 @@ footer h3{
 .copyright{
     padding: 10px 0;
     text-align: center;
+}
+
+/*For Mobile*/
+
+@media only screen and (max-width:400px){
+    .container{
+        width: 90%;
+    }
+    .brand{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    .navlinks{
+        display: grid;
+        grid-template-columns: auto;
+        background: var(--footerBg);
+    }
+    .navlinks .active{
+        margin-top: 0px;
+    }
+    .navlinks li{
+        margin: 20px auto;
+    }
+    .navlinks li a{
+        color: rgb(253, 250, 250);
+    }
+    .brand img{
+        width: 100px;
+    }
+    .header{
+        height: 100%;
+    }
+    .header-content{
+        margin: 20px auto;
+        flex-direction: column;
+    }
+    .line{
+        width: 100px;
+    }
+    .header-content{
+        font-size: 20px;
+    }
+    .header-content img{
+        margin: 30px auto;
+    }
+    #categories{
+        flex-direction: column;
+    }
+    .category{
+        margin: 20px auto;
+    }
+    .category img{
+        max-width: 90%;
+    }
+    .products{
+        justify-content: center;
+    }
+    .product{
+        margin: 20px auto;
+    }
+    #offer .container{
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    #offer .container img{
+        max-width: 90%;
+    }
+    #offer .container h1{
+        font-size: 40px;
+    }
+    .offer-content{
+        margin-top: 30px;
+    }
+    #featured{
+        flex-direction: column;
+    }
+    #featured img{
+        margin: 20px auto;
+    }
+    .footer-content{
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        padding: 40px 0;
+    }
+    .footer-content .col{
+        margin: 10px 0;
+    }
 }
